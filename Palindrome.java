@@ -36,6 +36,15 @@ public class Palindrome {
   public static boolean recursiveCharAt(String s)
   {
     //TODO Implement this.
+    if (s.length() == 1 || s.length() == 0) {
+     return true;
+    }
+    if (s.charAt(0) == s.charAt(s.length() - 1)) {
+     return recursiveCharAt(s.substring(1, s.length() - 1));
+    }
+    else {
+     return false; 
+    }
   }
   
  /**
@@ -43,7 +52,7 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  public static boolean iterativeSubstring(String s)
+ public static boolean iterativeSubstring(String s)
   {
     //TODO Implement this.
   }
