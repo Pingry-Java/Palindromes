@@ -23,14 +23,14 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  //public static boolean iterativeCharAt(String s)
-  //{
+  public static boolean iterativeCharAt(String s)
+  {
     //TODO Implement this.
-  //}
+  }
   
  /**
   *   This method tests for palindrome-ness using recursion and the charAt method.
-  *   @param s the String to check whether it is a palindrome
+  *   @param str the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
   public static boolean recursiveCharAt(String str)
@@ -43,24 +43,24 @@ public class Palindrome {
 			return false;
 	}
   
- /**
+ /** 
   *   This method tests for palindrome-ness using a loop and the substring method.
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
- // public static boolean iterativeSubstring(String s)
-  //{
+  public static boolean iterativeSubstring(String s)
+  {
     //TODO Implement this.
- // }
+  }
   
  /**
   *   This method tests for palindrome-ness using recursion and the substring method.
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  //public static boolean recursiveSubstring(String s)
-  //{
+  public static boolean recursiveSubstring(String s)
+  {
     //TODO Implement this.
-  //}
+  }
 
 }
