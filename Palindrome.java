@@ -12,40 +12,9 @@ public class Palindrome {
 
   public static void main(String args[]) {
     String testString = "banana";
-    System.out.println(iterativeCharAt(testString));
-    System.out.println(recursiveCharAt(testString));
-    System.out.println(iterativeSubstring(testString));
     System.out.println(recursiveSubstring(testString));
-  }
-
- /**
-  *   This method tests for palindrome-ness using a loop and the charAt method.
-  *   @param s the String to check whether it is a palindrome
-  *   @return boolean true if palindrome, false otherwise
-  */
-  public static boolean iterativeCharAt(String s)
-  {
-    //TODO Implement this.
-  }
-  
- /**
-  *   This method tests for palindrome-ness using recursion and the charAt method.
-  *   @param s the String to check whether it is a palindrome
-  *   @return boolean true if palindrome, false otherwise
-  */
-  public static boolean recursiveCharAt(String s)
-  {
-    //TODO Implement this.
-  }
-  
- /**
-  *   This method tests for palindrome-ness using a loop and the substring method.
-  *   @param s the String to check whether it is a palindrome
-  *   @return boolean true if palindrome, false otherwise
-  */
-  public static boolean iterativeSubstring(String s)
-  {
-    //TODO Implement this.
+	testString = "racecar";
+    System.out.println(recursiveSubstring(testString));
   }
   
  /**
@@ -55,7 +24,17 @@ public class Palindrome {
   */
   public static boolean recursiveSubstring(String s)
   {
-    //TODO Implement this.
+    //determines the length of the string
+	int length = s.length();
+	if (length == 1)
+	{
+		return true;
+	}		
+	if (s.substring(length - 1, length).equals(s.substring(0,1)))
+	{
+		return recursiveSubstring(s.substring(1, length - 1));
+	}
+	return false;
   }
 
 }
