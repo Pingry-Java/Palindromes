@@ -11,11 +11,11 @@
 public class Palindrome {
 
   public static void main(String args[]) {
-    String testString = "banana";
+    String testString = "anana";
     System.out.println(iterativeCharAt(testString));
-    System.out.println(recursiveCharAt(testString));
-    System.out.println(iterativeSubstring(testString));
-    System.out.println(recursiveSubstring(testString));
+   // System.out.println(recursiveCharAt(testString));
+    //System.out.println(iterativeSubstring(testString));
+   // System.out.println(recursiveSubstring(testString));
   }
 
  /**
@@ -25,7 +25,15 @@ public class Palindrome {
   */
   public static boolean iterativeCharAt(String s)
   {
-    //TODO Implement this.
+    for (int i = 0; i<s.length(); i++){
+    	if(s.charAt(i)!=s.charAt(s.length()-1-i)){
+    		break;
+    	}
+    	if (i==s.length()-1){
+    		return true;
+    	}
+    }
+    return false;
   }
   
  /**
@@ -36,6 +44,7 @@ public class Palindrome {
   public static boolean recursiveCharAt(String s)
   {
     //TODO Implement this.
+    return true;
   }
   
  /**
@@ -46,6 +55,7 @@ public class Palindrome {
   public static boolean iterativeSubstring(String s)
   {
     //TODO Implement this.
+    return true;
   }
   
  /**
@@ -56,6 +66,7 @@ public class Palindrome {
   public static boolean recursiveSubstring(String s)
   {
     //TODO Implement this.
+    return true;
   }
 
 }
