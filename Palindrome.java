@@ -12,10 +12,13 @@ public class Palindrome {
 
   public static void main(String args[]) {
     String testString = "banana";
-    System.out.println(iterativeCharAt(testString));
-    System.out.println(recursiveCharAt(testString));
-    System.out.println(iterativeSubstring(testString));
+  
+   // System.out.println(iterativeCharAt(testString));
+    //System.out.println(recursiveCharAt(testString));
+   // System.out.println(iterativeSubstring(testString));
     System.out.println(recursiveSubstring(testString));
+    System.out.println(recursiveSubstring("tacocat"));
+    System.out.println(recursiveSubstring("TACocat"));
   }
 
  /**
@@ -23,9 +26,10 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  public static boolean iterativeCharAt(String s)
-  {
-    //TODO Implement this.
+  //public static boolean iterativeCharAt(String s)
+  { 
+    //TODO
+    
   }
   
  /**
@@ -33,9 +37,10 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  public static boolean recursiveCharAt(String s)
+  //public static boolean recursiveCharAt(String s)
   {
-    //TODO Implement this.
+
+     //TODO
   }
   
  /**
@@ -43,9 +48,9 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  public static boolean iterativeSubstring(String s)
+ // public static boolean iterativeSubstring(String s)
   {
-    //TODO Implement this.
+    //TODO 
   }
   
  /**
@@ -55,7 +60,15 @@ public class Palindrome {
   */
   public static boolean recursiveSubstring(String s)
   {
-    //TODO Implement this.
-  }
+
+    s = s.toLowerCase(); //NOT case sensitive! 
+    if(s.length() == 0 || s.length() ==1) {
+        return true; }
+    if(s.substring(0,1).equals(s.substring(s.length() -1))) {
+        return recursiveSubstring(s.substring(1, s.length()-1)); }
+    else {
+        return false;  }
+    }
+  
 
 }
