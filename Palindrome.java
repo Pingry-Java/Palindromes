@@ -11,7 +11,7 @@
 public class Palindrome {
 
   public static void main(String args[]) {
-    String testString = "anana";
+    String testString = "hannahb";
     String finalString = "";
     String placeHolder = testString;
     //System.out.println(iterativeCharAt(testString));
@@ -33,6 +33,8 @@ public class Palindrome {
  /**
   *   This method tests for palindrome-ness using recursion and the charAt method.
   *   @param s the String to check whether it is a palindrome
+      @param finalString the empty string that will be written as s backwords
+      @param p the placeholder that holds s
   *   @return boolean true if palindrome, false otherwise
   */
   public static boolean recursiveCharAt(String s, String finalString, String p)
