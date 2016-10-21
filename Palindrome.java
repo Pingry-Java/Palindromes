@@ -11,11 +11,13 @@
 public class Palindrome {
 
   public static void main(String args[]) {
-    String testString = "banana";
-    System.out.println(iterativeCharAt(testString));
-    System.out.println(recursiveCharAt(testString));
-    System.out.println(iterativeSubstring(testString));
-    System.out.println(recursiveSubstring(testString));
+    String testString = "anana";
+    String finalString = "";
+    String placeHolder = testString;
+    //System.out.println(iterativeCharAt(testString));
+    System.out.println(recursiveCharAt(testString, finalString, placeHolder));
+    //System.out.println(iterativeSubstring(testString));
+    //System.out.println(recursiveSubstring(testString));
   }
 
  /**
@@ -23,7 +25,7 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  public static boolean iterativeCharAt(String s)
+  //public static boolean iterativeCharAt(String s)
   {
     //TODO Implement this.
   }
@@ -33,9 +35,21 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  public static boolean recursiveCharAt(String s)
+  public static boolean recursiveCharAt(String s, String finalString, String p)
   {
     //TODO Implement this.
+      int counter = (s.length() -1);
+      char newChar = s.charAt(counter);
+      finalString += newChar;
+      if (counter > 0)
+          return recursiveCharAt(s.substring(0,counter), finalString, p);
+      
+      
+      if (p.equals(finalString))
+          return true;
+      
+      return false;
+      
   }
   
  /**
@@ -43,7 +57,7 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  public static boolean iterativeSubstring(String s)
+  //public static boolean iterativeSubstring(String s)
   {
     //TODO Implement this.
   }
@@ -53,7 +67,7 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  public static boolean recursiveSubstring(String s)
+  //public static boolean recursiveSubstring(String s)
   {
     //TODO Implement this.
   }
