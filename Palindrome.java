@@ -29,10 +29,8 @@ public class Palindrome {
   }
   
  /**
-  *   This method tests for palindrome-ness using recursion and the charAt method.
+  *   This method takes string s and determines if it a palindrome or not
   *   @param s the String to check whether it is a palindrome
-      @param finalString the empty string that will be written as s backwords
-      @param p the placeholder that holds s
   *   @return boolean true if palindrome, false otherwise
   */
 
@@ -41,6 +39,14 @@ public class Palindrome {
       boolean bool = booleanFinder(s,"",s);
       return bool;
   }
+    
+/**
+  *   This method tests for palindrome-ness using recursion and the charAt method.
+  *   @param s the String to check whether it is a palindrome
+      @param finalString the empty string that will be written as s backwords
+      @param p the placeholder that holds s
+  *   @return boolean true if palindrome, false otherwise
+  */
   public static boolean booleanFinder(String s, String finalString, String p)
   {
     //TODO Implement this.
