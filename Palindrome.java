@@ -35,7 +35,6 @@ public class Palindrome {
   */
   public static boolean recursiveCharAt(String s)
   {
-    //TODO Implement this.
     if (s.length() == 1 || s.length() == 0) {
      return true;
     }
