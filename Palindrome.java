@@ -45,8 +45,21 @@ public class Palindrome {
   */
   public static boolean iterativeSubstring(String s)
   {
-    //TODO Implement this.
+
+    int count = 0;
+
+    while (count <= s.length() - 1)
+    {
+      if (s.substring(0, 1).equals(s.substring(s.length() - 1, s.length())) == false)
+        return false;
+
+      else
+        s = s.substring(1, s.length() - 1);
+      count ++;
+    }
+    return true;
   }
+
   
  /**
   *   This method tests for palindrome-ness using recursion and the substring method.
