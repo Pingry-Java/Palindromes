@@ -12,10 +12,10 @@ public class Palindrome {
 
   public static void main(String args[]) {
     String testString = "racecar";
-    //System.out.println(iterativeCharAt(testString));
-    //System.out.println(recursiveCharAt(testString));
+    System.out.println(iterativeCharAt(testString));
+    System.out.println(recursiveCharAt(testString));
     System.out.println(iterativeSubstring(testString));
-    //System.out.println(recursiveSubstring(testString));
+    System.out.println(recursiveSubstring(testString));
   }
 
  /**
@@ -23,7 +23,7 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  //public static boolean iterativeCharAt(String s)
+  public static boolean iterativeCharAt(String s)
   {
     //TODO Implement this.
   }
@@ -33,7 +33,7 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  //public static boolean recursiveCharAt(String s)
+  public static boolean recursiveCharAt(String s)
   {
     if (s.length() == 1 || s.length() == 0) {
      return true;
@@ -70,7 +70,7 @@ public class Palindrome {
   *   @param s the String to check whether it is a palindrome
   *   @return boolean true if palindrome, false otherwise
   */
-  //public static boolean recursiveSubstring(String s)
+  public static boolean recursiveSubstring(String s)
   {
     //TODO Implement this.
   }
