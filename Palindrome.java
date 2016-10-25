@@ -11,11 +11,9 @@
 public class Palindrome {
 
   public static void main(String args[]) {
-    String testString = "hannahb";
-    String finalString = "";
-    String placeHolder = testString;
+    String testString = "hannah";
     //System.out.println(iterativeCharAt(testString));
-    System.out.println(recursiveCharAt(testString, finalString, placeHolder));
+    System.out.println(recursiveCharAt(testString));
     //System.out.println(iterativeSubstring(testString));
     //System.out.println(recursiveSubstring(testString));
   }
@@ -37,14 +35,20 @@ public class Palindrome {
       @param p the placeholder that holds s
   *   @return boolean true if palindrome, false otherwise
   */
-  public static boolean recursiveCharAt(String s, String finalString, String p)
+
+  public static boolean recursiveCharAt(String s)
+  {
+      boolean bool = booleanFinder(s,"",s);
+      return bool;
+  }
+  public static boolean booleanFinder(String s, String finalString, String p)
   {
     //TODO Implement this.
       int counter = (s.length() -1);
       char newChar = s.charAt(counter);
       finalString += newChar;
       if (counter > 0)
-          return recursiveCharAt(s.substring(0,counter), finalString, p);
+          return booleanFinder(s.substring(0,counter), finalString, p);
       
       
       if (p.equals(finalString))
